@@ -20,7 +20,7 @@ public class Ej_Extra_3 {
 //            num = lista1 [i];
 //            tablaAux [num] = 'x';
         
-        //Comprobar si los elementos de la lista2 se encuentran marcadosen la tabla
+        //Comprobar si los elementos de la lista2 se encuentran marcados en la tabla
         for (int i=0; 1<lista2.length; i++){
             num = lista2[i];
             if (tablaAux [num]!= 'x'){
