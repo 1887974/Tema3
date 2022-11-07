@@ -8,7 +8,7 @@ public class Cadena_03 {
         Scanner scanner = new Scanner(System.in);  
 
         String frase;
-    int palabras;
+        int palabras;
 
         
         System.out.println("Introduce una frase: ");
