@@ -21,6 +21,7 @@ public class Ej_11 {
         for (int fila = 0; fila < 3; fila++){            
             for (int columna = 0; columna < 6; columna++) {
                 System.out.print(" " + num[fila][columna] + " ");
+                
             }
             System.out.println("");
         }
