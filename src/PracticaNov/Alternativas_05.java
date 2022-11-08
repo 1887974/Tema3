@@ -22,8 +22,9 @@ public class Alternativas_05 {
             case 2 = ;
             case 4 =  ;          
         }
-        
-        
+        KLÑJOIGOUIGUOHI
+                IKÑLIHÑHIOHIOÑ
+                JOPHIIPHJ        
         
         
         
