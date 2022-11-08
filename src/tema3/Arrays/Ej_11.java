@@ -25,9 +25,7 @@ public class Ej_11 {
             }
             System.out.println("");
         }
-        
-        
-        
+ 
     }
 }
 
