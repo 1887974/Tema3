@@ -9,5 +9,5 @@ package PracticaNov;
  * @author sara
  */
 public class test {
-    t
+    tghgh
 }
