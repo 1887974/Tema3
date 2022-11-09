@@ -18,15 +18,10 @@ public class Alternativas_05 {
         mes = Integer.parseInt(scanner.nextLine());        
         
         switch (mes) {
-            case 1 = System.out.println("Tiene 31 días");
-            case 2 = ;
-            case 4 =  ;          
+            case 1 : System.out.println("Tiene 31 días");
+            case 2 : System.out.println("28/29 días");
+            case 4 : System.out.println("Tiene 30 días");          
         }
         
-        
-        
-        
-        
     }
-    
 }
