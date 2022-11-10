@@ -1,4 +1,4 @@
-package tema3.Arrays;
+package PracticaNov;
 /**
  *
  * @author sara.mula
@@ -6,7 +6,7 @@ package tema3.Arrays;
 
 import java.util.Scanner;
 
-public class Ej_02 {
+public class Arrays_02 {
     /**
      * @param args the command line arguments
      */

@@ -1,9 +1,9 @@
-package tema3.Arrays;
+package PracticaNov;
 /**
  *
  * @author sara.mula
  */
-public class Ej_01 {
+public class Arrays_01 {
     /**
      * @param args the command line arguments
      */
