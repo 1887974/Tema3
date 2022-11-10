@@ -65,7 +65,7 @@ public class Ej_13 {
         for (int i = 0; i<5; i++){
             if (notas [i][3]>mayorMedia)
                 mayorMedia = notas [i][3];
-                alumnoMedia = alumnos [i];
+            alumnoMedia = alumnos [i];
         }
         
         System.out.println("\nEl alumno con mayor media es " + alumnoMedia + " con un " + mayorMedia);

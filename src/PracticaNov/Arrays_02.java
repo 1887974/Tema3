@@ -16,6 +16,7 @@ public class Arrays_02 {
         int[] numeros = new int [5];
         int num;
         
+        //bucle para rellenar los 5 valores del array
         for (int i = 0; i<numeros.length; i++){
             System.out.println("número " + (i+1) + ": ");
             num = Integer.parseInt(scanner.nextLine());
@@ -25,17 +26,15 @@ public class Arrays_02 {
         System.out.println("ARRAY DE NÚMEROS");
         System.out.println("----------------");
         
+        //imprimir las filas
         for (int i = 0; i < numeros.length; i++){
             System.out.println("numero[" + numeros[i] + "]" + "->" + numeros[i]);
         }
-        
+        //imprimir todos los datos en una misma fila
         System.out.print("Array--> [");
         for (int i = 0; i<numeros.length-1; i++){
             System.out.print(numeros [i] + "|");
         }
         System.out.print( numeros[numeros.length-1] + "]");
-        
-        
-  
     }
 }
