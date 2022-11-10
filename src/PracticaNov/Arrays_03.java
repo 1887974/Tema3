@@ -19,19 +19,28 @@ public class Arrays_03 {
         System.out.println("Introduce las notas: ");
         //bucle para rellenar los 5 valores del array
         for (int i = 0; i<notas.length;i++){
-            System.out.println((notas[i]+1) + "ª nota: ");
+            System.out.println((i+1) + "ª nota: ");
             nota = Integer.parseInt(scanner.nextLine());
             notas[i] = nota;
         }
         
         int notaMax = 0;
-        int notaMin = 0;
+        int notaMin = 10;
         int suma = 0;
-        
+
         for(int i = 0; i<notas.length;i++){
-            if()
-            if()        
+            if(notas[i]>notaMax) notaMax = notas[i];
+            if(notas[i]<notaMin) notaMin = notas[i];
+            suma = suma + notas[i];
+            
         }
+        
+        double notasMedia = suma/notas.length;
+        
+        System.out.println("La nota más alta es " + notaMax);
+        System.out.println("La nota más baja es " + notaMin);
+        System.out.println("La nota más media es " + notasMedia);
+        
         
     }
 }
