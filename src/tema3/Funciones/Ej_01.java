@@ -30,7 +30,7 @@ public class Ej_01 {
     
     public static boolean esPar (int num) {
         boolean resultado;
-        if (num %2==0){
+        if (num %2 == 0){
             resultado = true;
             //return true;
         } else {
