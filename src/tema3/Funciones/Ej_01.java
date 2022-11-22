@@ -16,19 +16,28 @@ public class Ej_01 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-//        System.out.println("Dime el lado del cuadrado: ");
-//        int area;
-//        area = lado * lado;
-//        
-//        int radio;
-//        System.out.println("Dime el radio del círculo: ");
-//        radio = Integer.parseInt(scanner.nextLine());
+        System.out.println("Par o impar:");
+        System.out.println("------------");
+        System.out.println("Introduce un número:");
+        int num = Integer.parseInt(scanner.nextLine());
         
+        if (esPar(num)){
+            System.out.println("El número es par.");
+        } else {
+            System.out.println("El número no es par.");
+        }
     }
     
-    public static double areaCirculo(int radio){
-        double area = Math.PI*radio*radio;
-        return area;
+    public static boolean esPar (int num) {
+        boolean resultado;
+        if (num %2==0){
+            resultado = true;
+            //return true;
+        } else {
+            resultado = false;
+            //return false;
+        }
+        return resultado;
     }
     
 }
