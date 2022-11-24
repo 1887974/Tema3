@@ -36,10 +36,16 @@ public class Ej_03 {
     
     public static boolean FechaCorrecta(int dia, int mes, int year) {
 
+        //terminar funcion
+        
+        boolean diaCorrecto;
+        boolean mesCorrecto;
+        boolean yearCorrecto;
+        
         if (year >= 1900 && year <= 2500) {
-            System.out.println ("El año es correcto.");
+            yearCorrecto = true; 
         } else {
-            System.out.println ("Error en el año.");
+            yearCorrecto = false;
         }
 
         if (mes <= 1 && mes <= 12) {
