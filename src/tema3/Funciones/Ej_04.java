@@ -22,30 +22,39 @@ public class Ej_04 {
         int mes = Integer.parseInt(scanner.nextLine());
         int year = Integer.parseInt(scanner.nextLine());
         
-        boolean fechaCorrecta;
-        if(fechaCorrecta){
-        System.out.println("Fecha introducida: " + imprimirFecha(dia, mes, year));
-        } else{
-            System.out.println("La fecha es incorrecta");
+        
+        switch(comprobarFecha(dia,mes,year)){
+            case 0: System.out.println("Fecha introducida: " + imprimirFecha(dia, mes, year));
+                    break;
+            case 1: System.out.printf("La fecha %d/%d/%d es \033[31mINCORRECTA (año incorrecto)\n",dia,mes,year);
+                    break;
+            case 2: System.out.printf("La fecha %d/%d/%d es \033[31mINCORRECTA (mes incorrecto)\n",dia,mes,year);
+                    break;
+            case 3: System.out.printf("La fecha %d/%d/%d es \033[31mINCORRECTA (día incorrecto)\n",dia,mes,year);
+                    break;
         }
     }
     
-    public static boolean comprobarFecha(int dia, int mes, int year){
-        boolean diaCorrecto;
+    public static int comprobarFecha(int dia, int mes, int year){
+        boolean diaCorrecto = false;
         boolean mesCorrecto;
         boolean yearCorrecto;
         
+        //analizo el año
         if (year >= 1900 && year <= 2500) {
             yearCorrecto = true; 
         } else {
             yearCorrecto = false;
         }
         
+        //analizo el mes
         if (mes <= 1 && mes <= 12) {
             mesCorrecto = true;
         } else {
             mesCorrecto = false;
         }
+        
+        //analizo el dia dependiendo del mes
         switch (mes) {
         case 1, 3, 5, 7, 8, 10, 12: 
             if (dia >= 1 && dia <= 31) diaCorrecto = true;
@@ -56,7 +65,7 @@ public class Ej_04 {
             if (dia >= 1 && dia <= 31) diaCorrecto = true;
             else diaCorrecto = false;
                         break;
-        
+        //analizo si febrero es bisisesto
         case 2: 
             if (Year.of(year).isLeap()){
                 if (dia >= 1 && dia <= 29) diaCorrecto = true;
@@ -65,11 +74,15 @@ public class Ej_04 {
             else {
                 if (dia >= 1 && dia <= 28) diaCorrecto = true;
                 else diaCorrecto = false;
-            }        
+            }
+                        break;
         }
-        
-        return ;
-    }
+        //codigo para saber qué dato es incorrecto
+        if(yearCorrecto == false) return 1;
+        else if(mesCorrecto == false) return 2;
+        else if(diaCorrecto == false) return 3;
+        else return 0;//todo correcto
+        }
     
     public static String imprimirFecha (int dia, int mes, int year){
         
