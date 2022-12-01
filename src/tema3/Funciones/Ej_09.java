@@ -16,6 +16,7 @@ public class Ej_09 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int num;
+
         do{
             System.out.println("***************");
             String frase = scanner.nextLine();
@@ -27,25 +28,25 @@ public class Ej_09 {
             System.out.println("Introduce una opción:");
             num = Integer.parseInt(scanner.nextLine());
             
-        switch(num){
-            case 1: System.out.println("Introduce una nueva cadena de texto: ");
-                    frase = scanner.nextLine();
-                    break;
-            case 2: System.out.println(sustituirBlancos(frase));
-                    break;
-            case 3: System.out.println(capitalizarCadena(frase));
-                    break;
-            case 4: System.out.println("Saliendo...");
-                    break;
-        }
-            
-            
+            switch(num){
+                case 1: System.out.println("Introduce una nueva cadena de texto: ");
+                        frase = devolverCadena(frase);
+                        break;
+                case 2: System.out.println(capitalizarCadena(frase));
+                        break;
+                case 3: System.out.println(sustituirBlancos(frase));
+                        break;
+                case 4: System.out.println("Saliendo...");
+                        break;
+            }
         } while (num > 4 || num < 1);
     }
     
     public static String devolverCadena(String cadena){
-        String texto = "";
-        return texto;
+        Scanner scanner = new Scanner(System.in);
+        
+        String nueva_frase = scanner.nextLine();
+        return nueva_frase;
     }
     
     public static String sustituirBlancos(String cadena){
@@ -54,20 +55,21 @@ public class Ej_09 {
     }
     
     public static String capitalizarCadena(String cadena){
-//     String[] separadaPorEspacios = cadena.split(" ");
-//		for (int i = 0; i < separadaPorEspacios.length; i++) {
-//			String palabra = separadaPorEspacios[i];
-//			char primeraLetra = palabra.charAt(0);
-//			primeraLetra = Character.toUpperCase(primeraLetra);
-//		} 
-        for(int i=0; i<cadena.length(); i++){
-            
-            
-        }
-
-                String cadenaMayus = "";
-		
-		return cadenaMayus;
+//        String[] separadaPorEspacios = cadena.split(" ");
+//        String[] iniciales = new String [separadaPorEspacios.length];
+//        for (int i = 0; i < separadaPorEspacios.length; i++) {
+//                String palabra = separadaPorEspacios[i];
+//                char primeraLetra = palabra.charAt(0);
+//                primeraLetra = Character.toUpperCase(primeraLetra);
+//                iniciales[i] = Character.toString(primeraLetra[i]);
+//        } 
+                
+//        for(int i=0; i<cadena.length(); i++){
+//            
+//        }
+        
+        String cadenaMayus = "";	
+        return cadenaMayus;
     }
     
 }

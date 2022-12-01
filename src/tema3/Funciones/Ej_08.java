@@ -15,20 +15,27 @@ public class Ej_08 {
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int num = Integer.parseInt(scanner.nextLine());
+        
         int [] lista = new int [5];
         lista = generar_lista(lista);
+        int num = 0;
         
         do{
             System.out.println("Manejador de arrays");
             System.out.println("-------------------");
-            //System.out.println(imprimir_array(lista));
+            System.out.print("Array -> "); imprimir_array(lista);
             System.out.println("-------------------");
             System.out.println("1. Generar nuevo array");
             System.out.println("2. Obtener el máximo y el mínimo");
             System.out.println("3. Obtener la suma");
             System.out.println("4. Salir");
             System.out.println("-------------------");
+            
+            do{
+                System.out.println("Eligue una opción:");
+                num = Integer.parseInt(scanner.nextLine());
+                    if(num > 4|| num < 1) System.out.println("Opción no disponible");
+            }while(num > 4 || num < 1);
 
             switch(num){
                 case 1: lista = generar_lista(lista);
@@ -42,11 +49,10 @@ public class Ej_08 {
                         System.out.println("La suma es: " + suma);
                         break;
                 case 4: System.out.println("Saliendo..."); 
-                        break;
-                //default: System.out.println("Opción no disponible");
+                        break;  
             }
             
-        } while(num > 4 || num < 1);
+        } while(num != 4);
     }
    
     public static int [] generar_lista(int lista[]){
@@ -85,11 +91,9 @@ public class Ej_08 {
         return num;
     }
     
-    public static String imprimir_array (int lista[]){
-        String imprimir = "";
+    public static void imprimir_array (int lista[]){
         for(int i=0; i<lista.length; i++){
-            imprimir = String.format("Array -> |%d|%d|%d|%d|%d|",lista[i]);
-        }
-        return imprimir;
+            System.out.printf("|%d",lista[i]);
+        } System.out.println("|");
     }
 }
