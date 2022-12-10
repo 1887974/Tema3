@@ -20,68 +20,63 @@ public class Ej_03 {
         Scanner scanner = new Scanner(System.in);
         int dia, mes, year;
 
-        System.out.print ("Introduce una fecha: ");
-        System.out.print ("Día: ");
+        System.out.println ("Introduce una fecha: ");
+        System.out.println ("Día: ");
         dia = Integer.parseInt (scanner.nextLine());
-        System.out.print ("Mes: ");
+        System.out.println ("Mes: ");
         mes = Integer.parseInt (scanner.nextLine());
-        System.out.print ("Año: ");
+        System.out.println ("Año: ");
         year = Integer.parseInt (scanner.nextLine());
         
-        
-        
-        
-        
+        if(fechaCorrecta(dia, mes, year)){
+            System.out.println("La fecha es correcta.");
+        } else {
+            System.out.println("La fecha es incorrecta.");
+        }
     }
     
-    public static boolean FechaCorrecta(int dia, int mes, int year) {
-
-        //terminar funcion
-        
-        boolean diaCorrecto;
+    public static boolean fechaCorrecta(int dia, int mes, int year) {
+        boolean diaCorrecto = true;
         boolean mesCorrecto;
         boolean yearCorrecto;
         
+        //comprobar año
         if (year >= 1900 && year <= 2500) {
             yearCorrecto = true; 
         } else {
             yearCorrecto = false;
         }
-
-        if (mes <= 1 && mes <= 12) {
-            
+        //comprobar mes
+        if (mes >= 1 && mes <= 12) {
+            mesCorrecto = true;
+        } else {
+            mesCorrecto = false;
         }
-        
+        //comprobar día según el mes
         switch (mes) {
         case 1, 3, 5, 7, 8, 10, 12: 
-            if (dia >= 1 && dia <= 31)
-                 System.out.println ("El día es correcto.");
-                
-            else System.out.println ("Error en el día.");        
+            if (dia >= 1 && dia <= 31) diaCorrecto = true;
+            else diaCorrecto = false;        
                         break;
-            
         case 4, 6, 9, 11: 
-            if (dia >= 1 && dia <= 31)
-                 System.out.println ("El día es correcto.");
-            
-            else System.out.println ("Error en el día.");
-                        break;
-        
+            if (dia >= 1 && dia <= 31)diaCorrecto = true;
+            else diaCorrecto = false;        
+                        break;        
         case 2: 
             if (Year.of(year).isLeap()){
-                if (dia >= 1 && dia <= 29)
-                    System.out.println ("El día es correcto.");
-                else 
-                    System.out.println ("Error en el día.");
+                if (dia >= 1 && dia <= 29) diaCorrecto = true;
+                else diaCorrecto = false;
             }
             else {
-                if (dia >= 1 && dia <= 28)
-                System.out.println ("El día es correcto.");
-                else 
-                    System.out.println ("Error en el día.");
-            }        
+                if (dia >= 1 && dia <= 28) diaCorrecto = true;
+                else diaCorrecto = false;        
+                        break;
         }        
-        return true;
-    }
-    
+    }   
+        if(diaCorrecto==true && mesCorrecto==true && yearCorrecto==true){
+            return true;
+        } else {
+            return false;
+        }
+    }   
 }

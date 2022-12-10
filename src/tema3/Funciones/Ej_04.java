@@ -46,21 +46,18 @@ public class Ej_04 {
         } else {
             yearCorrecto = false;
         }
-        
         //analizo el mes
-        if (mes <= 1 && mes <= 12) {
+        if (mes >= 1 && mes <= 12) {
             mesCorrecto = true;
         } else {
             mesCorrecto = false;
         }
-        
         //analizo el dia dependiendo del mes
         switch (mes) {
         case 1, 3, 5, 7, 8, 10, 12: 
             if (dia >= 1 && dia <= 31) diaCorrecto = true;
             else diaCorrecto = false;        
                         break;
-            
         case 4, 6, 9, 11: 
             if (dia >= 1 && dia <= 31) diaCorrecto = true;
             else diaCorrecto = false;
@@ -85,7 +82,6 @@ public class Ej_04 {
         }
     
     public static String imprimirFecha (int dia, int mes, int year){
-        
         String[] mesNombre = {
             "","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"
         };

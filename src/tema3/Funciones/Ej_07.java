@@ -24,7 +24,7 @@ public class Ej_07 {
             System.out.println(" " + resultado[i]);
         }
         
-        if(comparar_vectores(vector1,vector2)){
+        if(comparar_vectores(vector1,vector2) == true){
             System.out.println("Son iguales");
         } else {
             System.out.println("No son iguales");
@@ -51,7 +51,7 @@ public class Ej_07 {
         int[] resultado = new int [lista1.length + lista2.length];
         int indice_contador = 0;
         
-        for(int i=0; i<= lista1.length; i++){
+        for(int i=0; i < lista1.length; i++){
             resultado[indice_contador] = lista1[i];
             indice_contador++;
         }
