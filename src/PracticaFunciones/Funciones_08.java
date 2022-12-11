@@ -91,7 +91,7 @@ public class Funciones_08 {
     public static void imprimir_lista (int[]lista){
         System.out.println("Lista generada -> |");
         for (int i = 0; i < lista.length; i++) {
-            System.out.printf("%d%s","|");
+            System.out.printf("%d%s",lista[i],"|");
         }
     }
 }
