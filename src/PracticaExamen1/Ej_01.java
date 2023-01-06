@@ -41,7 +41,7 @@ public class Ej_01 {
     }
     
     public static int valor_min (int[]lista){
-        int min = 1;
+        int min = 10;
         for (int i = 0; i < lista.length; i++) {
             if (lista[i] < min) {
                 min = lista[i];

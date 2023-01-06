@@ -25,13 +25,12 @@ public class Funciones_01 {
     }    
     
     public static boolean esPar (int num){
-        boolean resultado;
+        
         if(num % 2 == 0){
-            resultado = true;
+            return true;
         } else {
-            resultado = false;
+            return false;
         }
-        return resultado;
     }
     
 }
